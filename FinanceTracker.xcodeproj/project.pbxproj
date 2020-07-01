@@ -7,14 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3088FAEF24ACB76E00DC6DC6 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3088FAED24ACB76E00DC6DC6 /* Model.xcdatamodeld */; };
+		3088FAF024ACB76E00DC6DC6 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3088FAED24ACB76E00DC6DC6 /* Model.xcdatamodeld */; };
+		30ABE92E24AC7F01005FC4BE /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30ABE92D24AC7F01005FC4BE /* MainView.swift */; };
+		30ABE92F24AC7F01005FC4BE /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30ABE92D24AC7F01005FC4BE /* MainView.swift */; };
+		30ABE93124AC8744005FC4BE /* CreateAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30ABE93024AC8744005FC4BE /* CreateAccountView.swift */; };
+		30ABE93224AC8744005FC4BE /* CreateAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30ABE93024AC8744005FC4BE /* CreateAccountView.swift */; };
+		30ABE93424AC87D1005FC4BE /* BalanceChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30ABE93324AC87D1005FC4BE /* BalanceChange.swift */; };
+		30ABE93524AC87D1005FC4BE /* BalanceChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30ABE93324AC87D1005FC4BE /* BalanceChange.swift */; };
+		30ABE93824AC8B1E005FC4BE /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30ABE93724AC8B1E005FC4BE /* Extensions.swift */; };
+		30ABE93924AC8B1E005FC4BE /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30ABE93724AC8B1E005FC4BE /* Extensions.swift */; };
 		30FF751224A6601400E5A265 /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FF751124A6601400E5A265 /* Tests_iOS.swift */; };
 		30FF751D24A6601400E5A265 /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FF751C24A6601400E5A265 /* Tests_macOS.swift */; };
 		30FF751F24A6601400E5A265 /* FinanceTrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FF74F624A6601400E5A265 /* FinanceTrackerApp.swift */; };
 		30FF752024A6601400E5A265 /* FinanceTrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FF74F624A6601400E5A265 /* FinanceTrackerApp.swift */; };
-		30FF752124A6601400E5A265 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FF74F724A6601400E5A265 /* ContentView.swift */; };
-		30FF752224A6601400E5A265 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FF74F724A6601400E5A265 /* ContentView.swift */; };
 		30FF752324A6601400E5A265 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30FF74F824A6601400E5A265 /* Assets.xcassets */; };
 		30FF752424A6601400E5A265 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30FF74F824A6601400E5A265 /* Assets.xcassets */; };
+		30FF753724A6602C00E5A265 /* AccountStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FF753324A6602C00E5A265 /* AccountStore.swift */; };
+		30FF753824A6602C00E5A265 /* AccountStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FF753324A6602C00E5A265 /* AccountStore.swift */; };
+		30FF753924A6602C00E5A265 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FF753424A6602C00E5A265 /* CardView.swift */; };
+		30FF753A24A6602C00E5A265 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FF753424A6602C00E5A265 /* CardView.swift */; };
+		30FF753B24A6602C00E5A265 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FF753524A6602C00E5A265 /* Account.swift */; };
+		30FF753C24A6602C00E5A265 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FF753524A6602C00E5A265 /* Account.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,8 +49,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3088FAEE24ACB76E00DC6DC6 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		30ABE92D24AC7F01005FC4BE /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		30ABE93024AC8744005FC4BE /* CreateAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountView.swift; sourceTree = "<group>"; };
+		30ABE93324AC87D1005FC4BE /* BalanceChange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceChange.swift; sourceTree = "<group>"; };
+		30ABE93724AC8B1E005FC4BE /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		30FF74F624A6601400E5A265 /* FinanceTrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinanceTrackerApp.swift; sourceTree = "<group>"; };
-		30FF74F724A6601400E5A265 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		30FF74F824A6601400E5A265 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		30FF74FD24A6601400E5A265 /* FinanceTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinanceTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		30FF750024A6601400E5A265 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +67,9 @@
 		30FF751824A6601400E5A265 /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		30FF751C24A6601400E5A265 /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
 		30FF751E24A6601400E5A265 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		30FF753324A6602C00E5A265 /* AccountStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountStore.swift; sourceTree = "<group>"; };
+		30FF753424A6602C00E5A265 /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		30FF753524A6602C00E5A265 /* Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +104,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		30ABE93624AC8B0C005FC4BE /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				30ABE93724AC8B1E005FC4BE /* Extensions.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		30D194FA24AC7E6F00650A38 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				30FF753524A6602C00E5A265 /* Account.swift */,
+				30ABE93324AC87D1005FC4BE /* BalanceChange.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		30D194FB24AC7E7600650A38 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				30FF753324A6602C00E5A265 /* AccountStore.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		30D194FC24AC7E8200650A38 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				30ABE92D24AC7F01005FC4BE /* MainView.swift */,
+				30FF753424A6602C00E5A265 /* CardView.swift */,
+				30ABE93024AC8744005FC4BE /* CreateAccountView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		30FF74F024A6601400E5A265 = {
 			isa = PBXGroup;
 			children = (
@@ -99,8 +155,12 @@
 			isa = PBXGroup;
 			children = (
 				30FF74F624A6601400E5A265 /* FinanceTrackerApp.swift */,
-				30FF74F724A6601400E5A265 /* ContentView.swift */,
+				30D194FC24AC7E8200650A38 /* View */,
+				30D194FB24AC7E7600650A38 /* ViewModel */,
+				30D194FA24AC7E6F00650A38 /* Model */,
+				30ABE93624AC8B0C005FC4BE /* Utility */,
 				30FF74F824A6601400E5A265 /* Assets.xcassets */,
+				3088FAED24ACB76E00DC6DC6 /* Model.xcdatamodeld */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -308,7 +368,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				30FF752124A6601400E5A265 /* ContentView.swift in Sources */,
+				30ABE93124AC8744005FC4BE /* CreateAccountView.swift in Sources */,
+				30FF753B24A6602C00E5A265 /* Account.swift in Sources */,
+				30ABE93424AC87D1005FC4BE /* BalanceChange.swift in Sources */,
+				30ABE93824AC8B1E005FC4BE /* Extensions.swift in Sources */,
+				30FF753724A6602C00E5A265 /* AccountStore.swift in Sources */,
+				3088FAEF24ACB76E00DC6DC6 /* Model.xcdatamodeld in Sources */,
+				30FF753924A6602C00E5A265 /* CardView.swift in Sources */,
+				30ABE92E24AC7F01005FC4BE /* MainView.swift in Sources */,
 				30FF751F24A6601400E5A265 /* FinanceTrackerApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -317,7 +384,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				30FF752224A6601400E5A265 /* ContentView.swift in Sources */,
+				30ABE93224AC8744005FC4BE /* CreateAccountView.swift in Sources */,
+				30FF753C24A6602C00E5A265 /* Account.swift in Sources */,
+				30ABE93524AC87D1005FC4BE /* BalanceChange.swift in Sources */,
+				30ABE93924AC8B1E005FC4BE /* Extensions.swift in Sources */,
+				30FF753824A6602C00E5A265 /* AccountStore.swift in Sources */,
+				3088FAF024ACB76E00DC6DC6 /* Model.xcdatamodeld in Sources */,
+				30FF753A24A6602C00E5A265 /* CardView.swift in Sources */,
+				30ABE92F24AC7F01005FC4BE /* MainView.swift in Sources */,
 				30FF752024A6601400E5A265 /* FinanceTrackerApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -696,6 +770,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		3088FAED24ACB76E00DC6DC6 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				3088FAEE24ACB76E00DC6DC6 /* Model.xcdatamodel */,
+			);
+			currentVersion = 3088FAEE24ACB76E00DC6DC6 /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 30FF74F124A6601400E5A265 /* Project object */;
 }
