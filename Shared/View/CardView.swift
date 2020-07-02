@@ -40,8 +40,7 @@ struct CardView: View {
                 
                 if isDraged {
                     Button {
-                        let index = accountStore.accounts.firstIndex(where: {$0.id == account.id})
-                        withAnimation { accountStore.accounts.remove(at: index!) }
+                        withAnimation { accountStore.delete(account: account) }
                     } label: {
                         Image(systemName: "xmark.circle")
                             .font(.system(size: 50))
@@ -56,7 +55,7 @@ struct CardView: View {
             ZStack {
                 Color(#colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1))
                 VStack (spacing: 25){
-                    ForEach(account.balanceChanges) { balanceChange in
+                    ForEach(Array(account.balanceChanges! as! Set<BalanceChange>), id: \.self) { balanceChange in
                         Expense(balanceChange: balanceChange)
                     }
                 }.padding(.vertical, 20)
@@ -80,12 +79,12 @@ struct BankCard: View {
     
     var body: some View {
         ZStack {
-            LinearGradient(gradient: Gradient(colors: [account.primaryColor, account.secondaryColor]),
+            LinearGradient(gradient: Gradient(colors: [Color(UIColor(hex: account.primaryColor!)!), Color(UIColor(hex: account.secondaryColor!)!)]),
                            startPoint: .bottomLeading,
                            endPoint: .topTrailing)
             VStack {
                 HStack {
-                    Text(account.name)
+                    account.name.map(Text.init)
                         .foregroundColor(.white)
                         .font(.system(size: 25, weight: .bold, design: .rounded))
                     Spacer()
@@ -127,10 +126,11 @@ struct Expense: View {
     
     var body: some View {
             HStack {
-                balanceChange.image.font(.system(size: 25, weight: .bold, design: .rounded))
-                Text(balanceChange.description).font(.system(size: 20, weight: .bold, design: .rounded))
+                Image(systemName: balanceChange.sfSymbol!)
+                    .font(.system(size: 25, weight: .bold, design: .rounded))
+                Text(balanceChange.name!).font(.system(size: 20, weight: .bold, design: .rounded))
                 Spacer()
-                Text(String(format: "%.2f", balanceChange.amount))
+                Text(balanceChange.amount.formattedBalance())
                     .font(.system(size: 20, weight: .medium, design: .rounded))
             }
             .shadow(radius: 6, x: 5, y: 5)

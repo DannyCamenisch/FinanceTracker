@@ -50,7 +50,7 @@ struct MainView: View {
                                     Label("New transaction", systemImage: "plus")
                                 }
                                 Button {
-                                        accountStore.accounts.removeFirst()
+                                    accountStore.delete(account: account)
                                 } label: {
                                     Label("Remove Account", systemImage: "trash")
                                 }

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17162" systemVersion="19F101" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Account" representedClassName="Account" syncable="YES" codeGenerationType="class">
+        <attribute name="balance" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="id" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="name" attributeType="String"/>
+        <attribute name="primaryColor" optional="YES" attributeType="String"/>
+        <attribute name="secondaryColor" optional="YES" attributeType="String"/>
+        <relationship name="balanceChanges" toMany="YES" deletionRule="Cascade" destinationEntity="BalanceChange" inverseName="account" inverseEntity="BalanceChange"/>
+    </entity>
+    <entity name="BalanceChange" representedClassName="BalanceChange" syncable="YES" codeGenerationType="class">
+        <attribute name="amount" attributeType="Float" usesScalarValueType="YES"/>
+        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="id" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="name" attributeType="String"/>
+        <attribute name="sfSymbol" attributeType="String"/>
+        <relationship name="account" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Account" inverseName="balanceChanges" inverseEntity="Account"/>
+    </entity>
+    <elements>
+        <element name="Account" positionX="-339.57421875" positionY="-46.6953125" width="128" height="133"/>
+        <element name="BalanceChange" positionX="-145.79296875" positionY="2.05859375" width="126.3359375" height="133"/>
+    </elements>
+</model>

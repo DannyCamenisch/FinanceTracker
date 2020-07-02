@@ -26,7 +26,7 @@ struct CreateAccountView: View {
             VStack {
                 TextField("Enter Account Name", text: $accountName)
                     .keyboardType(.default)
-                TextField("Enter Initial Amount 10.0", text: Binding(
+                TextField("Enter Initial Amount", text: Binding(
                     get: { String(self.amount) },
                     set: { self.amount = ($0 as NSString).floatValue}
                 ))
@@ -38,10 +38,9 @@ struct CreateAccountView: View {
                 .frame(height: 200)
                 
                 Button {
-                    var account = Account(name: accountName, balance: amount, primaryColor: primaryColor, secondaryColor: secondaryColor)
-                    account.balanceChanges.append(BalanceChange(description: "Initial Deposit", amount: amount, image: Image(systemName: "dollarsign.circle")))
-                    accountStore.accounts.append(account)
-                    isPresented = false
+                    accountStore.addNewAccountWith(name: accountName, balance: amount, primaryColor: primaryColor, secondaryColor: secondaryColor) {
+                        isPresented = false
+                    }
                 } label: {
                     Text("Save Account")
                         .font(.system(size: 25, weight: .medium, design: .rounded))

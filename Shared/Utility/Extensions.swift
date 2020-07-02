@@ -19,3 +19,14 @@ extension Color {
         return Color(red: .random(), green: .random(), blue: .random())
     }
 }
+
+extension Float {
+    func formattedBalance() -> String {
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .currency
+        formatter.locale = Locale.current
+
+        let formattedString: String = formatter.string(for: self)!
+        return formattedString
+    }
+}
