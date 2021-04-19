@@ -9,7 +9,7 @@ import Foundation
 import CoreData
 import SwiftUI
 
-extension Account: Identifiable {
+extension Account {
     @discardableResult convenience init(id: UUID = UUID(), name: String, balance: Float, primaryColor: Color, secondaryColor: Color, context: NSManagedObjectContext = CoreDataStack.shared.mainContext) {
         
         self.init(context: context)
@@ -17,7 +17,7 @@ extension Account: Identifiable {
         self.id = id
         self.name = name
         self.balance = balance
-        self.balanceChanges = [BalanceChange(name: "Initial depostit", amount: balance, sfSymbol: "dollarsign.circle")]
+        self.balanceChanges = [BalanceChange(name: "Initial deposit", amount: balance, sfSymbol: "dollarsign.circle")]
         self.primaryColor = UIColor(primaryColor).toHex
         self.secondaryColor = UIColor(secondaryColor).toHex
     }

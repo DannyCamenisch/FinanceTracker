@@ -8,7 +8,7 @@
 import Foundation
 import CoreData
 
-extension BalanceChange: Identifiable {
+extension BalanceChange {
     @discardableResult convenience init(name: String, amount: Float, sfSymbol: String, context: NSManagedObjectContext = CoreDataStack.shared.mainContext) {
         
         self.init(context: context)

@@ -17,7 +17,7 @@ extension UIColor {
         hexNormalized = hexNormalized.replacingOccurrences(of: "#", with: "")
 
         // Helpers
-        var rgb: UInt32 = 0
+        var rgb: UInt64 = 0
         var r: CGFloat = 0.0
         var g: CGFloat = 0.0
         var b: CGFloat = 0.0
@@ -25,7 +25,7 @@ extension UIColor {
         let length = hexNormalized.count
 
         // Create Scanner
-        Scanner(string: hexNormalized).scanHexInt32(&rgb)
+        Scanner(string: hexNormalized).scanHexInt64(&rgb)
 
         if length == 6 {
             r = CGFloat((rgb & 0xFF0000) >> 16) / 255.0

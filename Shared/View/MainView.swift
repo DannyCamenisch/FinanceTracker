@@ -10,7 +10,18 @@ import SwiftUI
 struct MainView: View {
     @Environment(\.colorScheme) var colorScheme: ColorScheme
     @EnvironmentObject var accountStore: AccountStore
-    @State var isPresented = false
+    
+    @State var showCreateAccount = false
+    @State var showNewTransaction = false
+    @State var showUpdateBalance = false
+    @State var selectedAccount: Account?
+    
+    enum SheetDestination {
+        case none
+        case createAccount
+        case newTransaction
+        case updateBalance
+    }
     
     var body: some View {
         ZStack {
@@ -19,7 +30,7 @@ struct MainView: View {
             VStack(alignment: .leading) {
                 HStack {
                     (
-                        Text("Current Balance:")
+                        Text("Total Balance:")
                             .font(.system(size: 25, weight: .bold, design: .rounded))
                             + Text("\n\(accountStore.totalBalance)")
                             .font(.system(size: 25, weight: .medium, design: .rounded))
@@ -29,7 +40,7 @@ struct MainView: View {
                     .layoutPriority(1)
                     
                     Button {
-                        isPresented = true
+                        showCreateAccount.toggle()
                     } label: {
                         Image(systemName: "plus.circle.fill")
                             .font(.system(size: 40))
@@ -37,38 +48,50 @@ struct MainView: View {
                     .padding(.top, 17)
                     .padding(.horizontal, 25)
                     .frame(maxWidth: .infinity, alignment: .trailing)
-                    
+                    .sheet(isPresented: $showCreateAccount, content: {
+                        CreateAccountView(isPresented: $showCreateAccount).environmentObject(accountStore)
+                    })
                 }
+                
                 ScrollView {
                     VStack {
                         ForEach(accountStore.accounts) { account in
                             CardView(account: account)
                                 .contextMenu {
-                                Button {
-                                    print("Context 1")
-                                } label: {
-                                    Label("New transaction", systemImage: "plus")
+                                    Button {
+                                        showNewTransaction.toggle()
+                                        selectedAccount = account
+                                    } label: {
+                                        Label("New Transaction", systemImage: "plus")
+                                    }
+                                    
+                                    Button {
+                                        showUpdateBalance.toggle()
+                                        selectedAccount = account
+                                    } label: {
+                                        Label("Update Balance", systemImage: "arrow.clockwise")
+                                    }
+                                    
+                                    Button {
+                                        accountStore.delete(account: account)
+                                    } label: {
+                                        Label("Remove Account", systemImage: "trash")
+                                    }
                                 }
-                                Button {
-                                    accountStore.delete(account: account)
-                                } label: {
-                                    Label("Remove Account", systemImage: "trash")
-                                }
-                            }
+                                .background(EmptyView().sheet(isPresented: $showNewTransaction, content: {
+                                    CreateTransactionView(account: $selectedAccount, isPresented: $showNewTransaction).environmentObject(accountStore)
+                                })
+                                .background(EmptyView().sheet(isPresented: $showUpdateBalance, content: {
+                                    UpdateBalanceView(account: $selectedAccount, isPresented: $showUpdateBalance).environmentObject(accountStore)
+                                })
+                                )
+                                )
+                            
                         }
                         Spacer()
                     }
                 }
-            }.sheet(isPresented: $isPresented, content: {
-                CreateAccountView(isPresented: $isPresented).environmentObject(accountStore)
-            })
-            
+            }
         }
-    }
-}
-
-struct MainView_Previews: PreviewProvider {
-    static var previews: some View {
-        MainView()
     }
 }

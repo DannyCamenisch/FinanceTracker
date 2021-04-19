@@ -1,6 +1,6 @@
 //
 //  CardView.swift
-//  ManaBar
+//  FinanceTracker
 //
 //  Created by Danny on 25.06.20.
 //
@@ -55,7 +55,13 @@ struct CardView: View {
             ZStack {
                 Color(#colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1))
                 VStack (spacing: 25){
-                    ForEach(Array(account.balanceChanges! as! Set<BalanceChange>), id: \.self) { balanceChange in
+                    Text("Transactions")
+                        .foregroundColor(.white)
+                        .font(.system(size: 25, weight: .bold, design: .rounded))
+                    
+                    ForEach(Array(account.balanceChanges! as! Set<BalanceChange>).sorted(by: {
+                        $0.date!.compare($1.date!) == .orderedDescending
+                    }), id: \.self) { balanceChange in
                         Expense(balanceChange: balanceChange)
                     }
                 }.padding(.vertical, 20)

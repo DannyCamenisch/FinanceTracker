@@ -69,6 +69,24 @@ class AccountStore: ObservableObject {
         saveToPersistentStore()
     }
     
+    func updateBalance(account: Account, balance: Float) {
+        let sfSymbol = balance - account.balance < 0 ? "minus.circle" : "plus.circle"
+        let balanceChange = BalanceChange(name: "Updated Balance", amount: balance - account.balance, sfSymbol: sfSymbol)
+        account.addToBalanceChanges(balanceChange)
+        
+        update(account: account, name: account.name!, balance: balance)
+        saveToPersistentStore()
+    }
+    
+    func newTransaction(account: Account, change: Float, description: String) {
+        let sfSymbol = change < 0 ? "minus.circle" : "plus.circle"
+        let balanceChange = BalanceChange(name: description, amount: change, sfSymbol: sfSymbol)
+        account.addToBalanceChanges(balanceChange)
+        
+        update(account: account, name: account.name!, balance: account.balance + change)
+        saveToPersistentStore()
+    }
+    
     // Delete
     func delete(account: Account) {
         let mainC = CoreDataStack.shared.mainContext
@@ -77,10 +95,8 @@ class AccountStore: ObservableObject {
     
     func deleteAccount(at indexSet: IndexSet) {
         guard let index = Array(indexSet).first else { return }
-        
         let account = self.accounts[index]
         
         delete(account: account)
-        
     }
 }

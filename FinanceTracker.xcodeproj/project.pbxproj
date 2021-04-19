@@ -7,8 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		300D8075262CB80A00D6CD78 /* NumbersOnly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300D8074262CB80A00D6CD78 /* NumbersOnly.swift */; };
+		300D8076262CB80A00D6CD78 /* NumbersOnly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300D8074262CB80A00D6CD78 /* NumbersOnly.swift */; };
 		300F952A24ADFCC90023F690 /* UIColor + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300F952924ADFCC90023F690 /* UIColor + Extension.swift */; };
 		300F952B24ADFCC90023F690 /* UIColor + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300F952924ADFCC90023F690 /* UIColor + Extension.swift */; };
+		30270147262DB989004BC4F8 /* CreateTransactionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30270146262DB989004BC4F8 /* CreateTransactionView.swift */; };
+		30270148262DB989004BC4F8 /* CreateTransactionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30270146262DB989004BC4F8 /* CreateTransactionView.swift */; };
+		3027014E262DE5F5004BC4F8 /* UpdateBalanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3027014D262DE5F5004BC4F8 /* UpdateBalanceView.swift */; };
+		3027014F262DE5F5004BC4F8 /* UpdateBalanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3027014D262DE5F5004BC4F8 /* UpdateBalanceView.swift */; };
 		3088FAEF24ACB76E00DC6DC6 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3088FAED24ACB76E00DC6DC6 /* Model.xcdatamodeld */; };
 		3088FAF024ACB76E00DC6DC6 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3088FAED24ACB76E00DC6DC6 /* Model.xcdatamodeld */; };
 		309E50DF24ADCCB1002E6F9F /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309E50DE24ADCCB1002E6F9F /* CoreDataStack.swift */; };
@@ -53,7 +59,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		300D8074262CB80A00D6CD78 /* NumbersOnly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumbersOnly.swift; sourceTree = "<group>"; };
 		300F952924ADFCC90023F690 /* UIColor + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor + Extension.swift"; sourceTree = "<group>"; };
+		30270146262DB989004BC4F8 /* CreateTransactionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTransactionView.swift; sourceTree = "<group>"; };
+		3027014D262DE5F5004BC4F8 /* UpdateBalanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateBalanceView.swift; sourceTree = "<group>"; };
 		3088FAEE24ACB76E00DC6DC6 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		309E50DE24ADCCB1002E6F9F /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		309E50E124ADCCFD002E6F9F /* Account + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Account + Extension.swift"; sourceTree = "<group>"; };
@@ -115,6 +124,7 @@
 			children = (
 				30ABE93724AC8B1E005FC4BE /* Extensions.swift */,
 				300F952924ADFCC90023F690 /* UIColor + Extension.swift */,
+				300D8074262CB80A00D6CD78 /* NumbersOnly.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -143,6 +153,8 @@
 				30ABE92D24AC7F01005FC4BE /* MainView.swift */,
 				30FF753424A6602C00E5A265 /* CardView.swift */,
 				30ABE93024AC8744005FC4BE /* CreateAccountView.swift */,
+				30270146262DB989004BC4F8 /* CreateTransactionView.swift */,
+				3027014D262DE5F5004BC4F8 /* UpdateBalanceView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -299,7 +311,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1200;
-				LastUpgradeCheck = 1200;
+				LastUpgradeCheck = 1240;
 				TargetAttributes = {
 					30FF74FC24A6601400E5A265 = {
 						CreatedOnToolsVersion = 12.0;
@@ -381,11 +393,14 @@
 				30ABE93424AC87D1005FC4BE /* BalanceChange + Extension.swift in Sources */,
 				30ABE93824AC8B1E005FC4BE /* Extensions.swift in Sources */,
 				300F952A24ADFCC90023F690 /* UIColor + Extension.swift in Sources */,
+				3027014E262DE5F5004BC4F8 /* UpdateBalanceView.swift in Sources */,
 				30FF753724A6602C00E5A265 /* AccountStore.swift in Sources */,
 				3088FAEF24ACB76E00DC6DC6 /* Model.xcdatamodeld in Sources */,
 				309E50DF24ADCCB1002E6F9F /* CoreDataStack.swift in Sources */,
 				30FF753924A6602C00E5A265 /* CardView.swift in Sources */,
 				30ABE92E24AC7F01005FC4BE /* MainView.swift in Sources */,
+				30270147262DB989004BC4F8 /* CreateTransactionView.swift in Sources */,
+				300D8075262CB80A00D6CD78 /* NumbersOnly.swift in Sources */,
 				30FF751F24A6601400E5A265 /* FinanceTrackerApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -399,11 +414,14 @@
 				30ABE93524AC87D1005FC4BE /* BalanceChange + Extension.swift in Sources */,
 				30ABE93924AC8B1E005FC4BE /* Extensions.swift in Sources */,
 				300F952B24ADFCC90023F690 /* UIColor + Extension.swift in Sources */,
+				3027014F262DE5F5004BC4F8 /* UpdateBalanceView.swift in Sources */,
 				30FF753824A6602C00E5A265 /* AccountStore.swift in Sources */,
 				3088FAF024ACB76E00DC6DC6 /* Model.xcdatamodeld in Sources */,
 				309E50E024ADCCB1002E6F9F /* CoreDataStack.swift in Sources */,
 				30FF753A24A6602C00E5A265 /* CardView.swift in Sources */,
 				30ABE92F24AC7F01005FC4BE /* MainView.swift in Sources */,
+				30270148262DB989004BC4F8 /* CreateTransactionView.swift in Sources */,
+				300D8076262CB80A00D6CD78 /* NumbersOnly.swift in Sources */,
 				30FF752024A6601400E5A265 /* FinanceTrackerApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -602,6 +620,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 372TAJ6XCS;
@@ -626,6 +645,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 372TAJ6XCS;
