@@ -25,7 +25,7 @@ extension Float {
         let formatter = NumberFormatter()
         formatter.numberStyle = .currency
         formatter.locale = Locale.current
-
+        
         let formattedString: String = formatter.string(for: self)!
         return formattedString
     }

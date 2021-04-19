@@ -8,10 +8,12 @@
 import SwiftUI
 
 struct CreateTransactionView: View {
-    @Binding var account: Account?
     @State var description: String = ""
     @ObservedObject var amount = NumbersOnly()
+    
+    @Binding var account: Account?
     @Binding var isPresented: Bool
+    
     @EnvironmentObject var accountStore: AccountStore
     @Environment(\.colorScheme) var colorScheme: ColorScheme
     

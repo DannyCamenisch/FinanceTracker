@@ -12,6 +12,7 @@ struct CreateAccountView: View {
     @ObservedObject var amount = NumbersOnly()
     @State var primaryColor: Color = Color.random()
     @State var secondaryColor: Color = Color.random()
+    
     @Binding var isPresented: Bool
     
     @EnvironmentObject var accountStore: AccountStore

@@ -8,8 +8,9 @@
 import SwiftUI
 
 struct UpdateBalanceView: View {
-    @Binding var account: Account?
     @State var amount = NumbersOnly()
+    
+    @Binding var account: Account?
     @Binding var isPresented: Bool
     
     @EnvironmentObject var accountStore: AccountStore
@@ -18,6 +19,7 @@ struct UpdateBalanceView: View {
     var body: some View {
         ZStack {
             Color(colorScheme == ColorScheme.dark ? #colorLiteral(red: 0.082153745, green: 0.1134554222, blue: 0.2190876603, alpha: 1) : #colorLiteral(red: 0.8834986091, green: 0.9078560472, blue: 0.9523162246, alpha: 1)).edgesIgnoringSafeArea(.all)
+            
             VStack {
                 Spacer()
                 TextField("New Balance", text: $amount.value)
